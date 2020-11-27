@@ -22,6 +22,7 @@ function showPopup(){
 function closePopup(){
     popup.style.opacity = 0;
     popup.style.visibility = "hidden";
+    window.location.hash = "#projects";
 }
 
 popupButton.addEventListener('click', showPopup);
