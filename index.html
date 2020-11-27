@@ -19,7 +19,7 @@
         <title>Daiane Silva | Software Developer</title>
     </head>
     <body>
-        <div class="navigation">
+        <div class="navigation" id="navigation">
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
             <label for="navi-toggle" class="navigation__button">
                 <span class="navigation__icon">&nbsp;</span>
@@ -29,21 +29,19 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__link">About me</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Features</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Projects</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">References</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About me</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link">Features</a></li>
+                    <li class="navigation__item"><a href="#projects" class="navigation__link">Projects</a></li>
+                    <li class="navigation__item"><a href="#stories" class="navigation__link">References</a></li>
+                    <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
                 </ul>
             </nav>
-
-
         </div>
 
-
-        <header class="header">
+        <header class="header" id="#header">
+            <!-- Change density -->
             <div class="header__logo-box">
-                <img src="img/logo.png" alt="Logo" class='header__logo'>
+                <img src="img/white-logo.png" alt="Logo" class='header__logo'>
             </div>
 
             <div class="header__text-box">
@@ -51,15 +49,14 @@
                     <span class="heading-primary--main">Daiane Silva</span>
                     <span class="heading-primary--sub">full-stack software developer</span>
                 </h1>
-
-                <a href="#section-projects" class="btn btn--white btn--animated">Check my Projects</a>
+                <a href="#projects" class="btn btn--white btn--animated">Check my Projects</a>
             </div>
         </header>
 
         <main>
-            <section class="section-about">
+            <section class="section-about" id="about">
                 <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary"> About</h2>  
+                    <h2 class="heading-secondary"> About Me</h2>  
                 </div>
 
                 <div class="row">
@@ -88,7 +85,7 @@
                 </div>
             </section>
 
-            <section class="section-features">
+            <section class="section-features" id="features">
              
                 <div class="row">
                     <div class="col-1-of-4">
@@ -133,7 +130,7 @@
                 </div>
             </section>
 
-            <section class="section-projects" id="section-projects">
+            <section class="section-projects" id="projects">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary"> Projects</h2>  
                 </div>
@@ -330,11 +327,11 @@
 
                 <div class="u-center-text u-margin-top-huge">
                     <!-- link to github -->
-                    <a href="#popup" class="btn btn--blue">Check out my resume</a>
+                    <a href="#popup" class="btn btn--blue" id="popup__button">Check out my resume</a>
                 </div>
             </section>
 
-            <section class="section-stories">
+            <section class="section-stories" id="stories" >
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
@@ -380,7 +377,7 @@
                 </div>
             </section>
 
-            <section class="section-contact">
+            <section class="section-contact" id="contact">
                 <div class="row">
                     <div class="contact">
                         <div class="contact__form">
@@ -418,17 +415,18 @@
         <footer class="footer">
             <!-- ADD LINKS TO SOCIAL MEDIA / FONT AWESOME -->
             <div class="footer__logo-box">
-                <img src="img/logo.png" alt="logo" class="footer__logo">
+                <img src="img/logo-blue-large-2.png" alt="logo" class="footer__logo">
             </div>
             <div class="row">
                 <div class="col-1-of-2">
                     <div class="footer__navigation">
                         <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">About</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Projects</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Item</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                            <!-- LINKS to outside? -->
+                            <li class="footer__item"><a href="#" class="footer__link">Twitter</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Instagram</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Github</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Facebook</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Dribble</a></li>
                         </ul>
                     </div>
                 </div>
@@ -441,14 +439,14 @@
         </footer>
 
         <div class="popup" id="popup">
-            <div class="popup__content">
+            <div class="popup__content" id="popup__content">
                 <div class="popup__left">
                     <img src="img/nat-8.jpg" alt="image 8" class="popup__img">
                     <img src="img/nat-9.jpg" alt="image 9" class="popup__img">
                 </div>
                 <div class="popup__right">
                     <!-- Add font-awesome -->
-                    <a href="#section-projects" class="popup__close">&times;</a>
+                    <a href="#section-projects" class="popup__close" id="popup__close">&times;</a>
                     <h2 class="heading-secondary u-margin-bottom-small">Daiane A. da Silva</h2>
                     <h3 class="heading-tertiary u-margin-bottom-small">Software Developer</h3>
                     <p class="popup__text">
@@ -461,5 +459,5 @@
             </div>
         </div>
 
-    </body>
+  </body>
 </html>

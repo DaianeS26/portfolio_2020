@@ -38,7 +38,7 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
 
-        @include respond(tab-port) {
+         @include respond(tab-port) {
             top: 4.5rem;
             right: 4.5rem;   
         }
@@ -98,7 +98,7 @@
         }
     }
 
-    //FUNCTIONATLITY
+    //FUNCTIONALITY
 
     &__checkbox:checked ~ &__background {
         transform: scale(80);
@@ -118,7 +118,7 @@
         &::before,
         &::after {
             width: 3rem;
-            height: 2px;
+            height: 1px;
             background-color: $color-grey-dark-3;
             display: inline-block;
         }
