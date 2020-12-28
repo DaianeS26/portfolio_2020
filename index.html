@@ -16,6 +16,29 @@
         <link rel="manifest" href="favicon_io/site.webmanifest">
         
         <script src="script/script.js" defer></script>
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+            emailjs.init("user_gR32ps9dmNPqW342JhbUp");
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+        
         <title>Daiane Silva | Software Developer</title>
     </head>
     <body>
@@ -61,14 +84,12 @@
 
                 <div class="row">
                     <div class="col-1-of-2">
-                        <h3 class="heading-tertiary u-margin-bottom-small">What should I write here</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Hi! My name is Daiane!</h3>
                         <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At quos error, placeat maiores et velit non facere necessitatibus corporis dicta sed ea natus dolor labore exercitationem unde quo architecto fugit!
+                            I am a Brazilian native who become a United States citizen. I found a passion for software developement and decided to dive-in into front-end developement. After self-learning, I completed a coding bootcamp in Durham, NC.
                         </p>
-
-                        <h3 class="heading-tertiary u-margin-bottom-small">What should I write here</h3>
                         <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At quos error, placeat maiores et velit non facere necessitatibus corporis dicta sed ea natus dolor labore exercitationem unde quo architecto fugit!
+                            I have strong interpersonal skills. I am passionate, highly creative, reliable, curious, motivated to keep learning and creating beautiful applications.
                         </p>
 
                         <!-- Link to Linkedin -->
@@ -385,14 +406,15 @@
                                 <h2 class="heading-secondary"> Contact</h2>  
                             </div>
                             <!-- Learn about forms -->
-                            <form action="#" class="form">
+                            <form class="form" id="contact-form">
                                 <div class="form__group">
-                                    <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                                    <input type="hidden" name="contact_number">
+                                    <input type="text" class="form__input" placeholder="Full Name" id="name"  name="user_name" required>
                                     <label for="name" class="form__label">Full Name</label>
                                 </div>
 
                                 <div class="form__group">
-                                    <input type="email" class="form__input" placeholder="Email" id="email" required>
+                                    <input type="email" class="form__input" placeholder="Email" id="email" name="user_email" required>
                                     <label for="email" class="form__label">Email address</label>
                                 </div>
 
@@ -403,7 +425,7 @@
                                 </div>
 
                                 <div class="form__group">
-                                    <button class="btn btn--blue">Next Step &rarr;</button>
+                                    <input type="submit" class="btn btn--blue" value="Send &rarr;">
                                 </div>
                             </form>
                         </div>
@@ -449,10 +471,33 @@
                     <a href="#section-projects" class="popup__close" id="popup__close">&times;</a>
                     <h2 class="heading-secondary u-margin-bottom-small">Daiane A. da Silva</h2>
                     <h3 class="heading-tertiary u-margin-bottom-small">Software Developer</h3>
-                    <p class="popup__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <div class="popup__text">
+                        <h2 class="heading-tertiary">Work Experience</h2>
+                        <h3> Software Developer</h3>
+                        <p> Current and past projects</p>
+                        <ul>
+                            <li><span>Advanced CSS projects:</span> Trillo(Flex Boxes), Nexter (CSS Grid)</li>
+                            <li><span>Python:</span> Alien-invasion, Pathfinder,  </li>
+                            <li><span>Django:</span> Project Impact</li>
+                            <li><span>Javascript: Forkfy, ITunes search, Pig-game, </span></li>
+                            <li><span>Vue.JS:</span>Stock portfolio</li>
+                            <li><span>Angular:</span> Recipe App</li>
+                            <li><span>MySQL:</span>Mail List</li>
+                        </ul>
+
+                        <h2 class="heading-tertiary">
+                            Academic Background
+                        </h2>
+                        <h3>Momentum Learning</h3>
+                        <h4>Full-stack Software Developer, Coding Bootcamp 2019</h4>
+                        <ul>
+                            <li>Specialized in highly focused, immersive training centered on Python/Django language fluency,
+                                objected-oriented programming, and project-based learning.</li>
+                        </ul>
+                        <h3> Faculdades Metropolitanas Unidas</h3>
+                        <h4>International Relations, São Paulo - Brazil.</h4>
+
+                    </div>
                     <!-- Link to github? -->
                     <a href="#" class="btn btn--blue">See more</a>
                 </div>
