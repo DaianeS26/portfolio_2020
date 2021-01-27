@@ -282,7 +282,7 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/ProjectImpact.jpg); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #48cae4, #0096c7), url(../img/nat-6.jpg); }
     .card__picture--3 {
@@ -331,11 +331,11 @@ body {
     margin-bottom: 8rem;
     color: #fff; }
   .card__info-only {
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     text-transform: uppercase; }
   .card__info-value {
-    font-size: 6rem;
-    font-weight: 100; }
+    font-size: 1.5rem;
+    font-weight: 300; }
   @media only screen and (max-width: 56.25em) {
     .card {
       height: auto;

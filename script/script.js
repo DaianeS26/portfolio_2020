@@ -5,6 +5,27 @@ const popupButton = document.getElementById("popup__button");
 const popupContent = document.getElementById("popup__content");
 const popupClose = document.getElementById("popup__close");
 
+//Email JS functionality
+
+(function() {
+  emailjs.init("user_gR32ps9dmNPqW342JhbUp");
+})();
+
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // generate a five digit number for the contact_number variable
+      this.contact_number.value = Math.random() * 100000 | 0;
+      // Send form information to email JS api.
+      emailjs.sendForm('service_2zfeihg', 'template_lhf9757', 'contact-form')
+          .then(function() {
+              console.log('SUCCESS!');
+          }, function(error) {
+              console.log('FAILED...', error);
+          });
+  });
+}
+
 //Navigation
 Array.from(navLinks).forEach(link =>
   link.addEventListener("click", () => {

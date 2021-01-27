@@ -63,7 +63,7 @@
 
       &--1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
-        url(../img/nat-5.jpg);
+        url(../img/ProjectImpact.jpg);
       }
 
       &--2 {
@@ -141,13 +141,13 @@
     }
 
     &__info-only{
-      font-size: 1.4rem;
+      font-size: 2.5rem;
       text-transform: uppercase;
     }
 
     &__info-value {
-      font-size: 6rem;
-      font-weight: 100;
+      font-size: 1.5rem;
+      font-weight: 300;
     }
 
     // MEDIA QUERY

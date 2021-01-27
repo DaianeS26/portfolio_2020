@@ -19,28 +19,6 @@
 
         <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
-        <script type="text/javascript">
-        (function() {
-        emailjs.init("user_gR32ps9dmNPqW342JhbUp");
-        })();
-        </script>
-       
-        <script type="text/javascript">
-            window.onload = function() {
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    // generate a five digit number for the contact_number variable
-                    this.contact_number.value = Math.random() * 100000 | 0;
-                    // these IDs from the previous steps
-                    emailjs.sendForm('service_2zfeihg', 'template_lhf9757', 'contact-form')
-                        .then(function() {
-                            console.log('SUCCESS!');
-                        }, function(error) {
-                            console.log('FAILED...', error);
-                        });
-                });
-            }
-        </script>
         <title>Daiane Silva | Software Developer</title>
     </head>
     <body>
@@ -79,6 +57,7 @@
         </header>
 
         <main>
+            <!-- About Me -->
             <section class="section-about" id="about">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary"> About Me</h2>  
@@ -88,7 +67,10 @@
                     <div class="col-1-of-2">
                         <h3 class="heading-tertiary u-margin-bottom-small">Hi! My name is Daiane!</h3>
                         <p class="paragraph">
-                            I am a Brazilian native who become a United States citizen. I found a passion for software developement and decided to dive-in into front-end developement. After self-learning, I completed a coding bootcamp in Durham, NC.
+                            I am a Brazilian native who become a United States citizen. I found a passion for software developement and decided to dive-in into front-end developement. After a period of self-learning, I completed a coding bootcamp in Durham, NC.
+                        </p>
+                        <p class="paragraph">
+                            I am a nature and animal lover. I love spending time outdoors, watching birds and other wild animals. I love hiking, camping, reading books, watching movies and, taking care of my collection of houseplants.
                         </p>
                         <p class="paragraph">
                             I have strong interpersonal skills. I am passionate, highly creative, reliable, curious, motivated to keep learning and creating beautiful applications.
@@ -108,35 +90,36 @@
                 </div>
             </section>
 
+            <!-- My features -->
             <section class="section-features" id="features">
              
                 <div class="row">
                     <div class="col-1-of-4">
                         <div class="feature-box">
                             <i class="feature-box__icon icon-basic-world"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Title</h3>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Inquisitive</h3>
                             <p class="feature-box__text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo est veritatis deserunt ipsam consequatur repellendus ratione aspernatur vero adipisci sunt dignissimos officiis quas, incidunt minus, repellat quos? Itaque, sit.
+                                 I have a curious mind. I am passionate about constant learning about the world and new technologies.
                             </p>
                         </div>
                     </div>
 
                     <div class="col-1-of-4">
                         <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-compass"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Title</h3>
+                            <i class="feature-box__icon icon-basic-clock"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Reliable</h3>
                             <p class="feature-box__text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo est veritatis deserunt ipsam consequatur repellendus ratione aspernatur vero adipisci sunt dignissimos officiis quas, incidunt minus, repellat quos? Itaque, sit.
+                                I am approachable. I work hard and I am result-driven. I work well in groups. I have good communication.
                             </p>
                         </div>
                     </div>
 
                     <div class="col-1-of-4">
                         <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-map"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Title</h3>
+                            <i class="feature-box__icon icon-basic-lightbulb"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Creative</h3>
                             <p class="feature-box__text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo est veritatis deserunt ipsam consequatur repellendus ratione aspernatur vero adipisci sunt dignissimos officiis quas, incidunt minus, repellat quos? Itaque, sit.
+                               I enjoy the beauty of the world. I enjoy making people feel good by surrounding them with beautiful things.
                             </p>
                         </div>
                     </div>
@@ -144,9 +127,9 @@
                     <div class="col-1-of-4">
                         <div class="feature-box">
                             <i class="feature-box__icon icon-basic-heart"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Title</h3>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Compassionate</h3>
                             <p class="feature-box__text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium quo est veritatis deserunt ipsam consequatur repellendus ratione aspernatur vero adipisci sunt dignissimos officiis quas, incidunt minus, repellat quos? Itaque, sit.
+                                I am a compassionate human being who wishes to make the world a better place, one step at a time.
                             </p>
                         </div>
                     </div>
@@ -166,25 +149,24 @@
                                     &nbsp;
                                 </div>
                                 <h4 class="card__heading">
-                                    <span class="card__heading--span card__heading-span--1">Add title here</span>
+                                    <span class="card__heading--span card__heading-span--1">Project Impact</span>
                                 </h4>
                                 <div class="card__details">
                                     <ul>
-                                        <li>list item</li>
-                                        <li>list item</li>
-                                        <li>list item</li>
-                                        <li>list item</li>
-                                        <li>list item</li>
+                                        <li>Django</li>
+                                        <li>Javascript</li>
+                                        <li>Twillio</li>
+                                        <li>Group Project</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card__side card__side--back card__side--back-1">
                                 <div class="card__cta">
                                     <div class="card__info-box">
-                                        <p class="card__info-only">Text</p>
-                                        <p class="card__info-value">Text</p>
+                                        <p class="card__info-only u-margin-bottom-small">Project Impact</p>
+                                        <p class="card__info-value">Momentum graduation project. Our goal was to create a platform that would allow people interested in mentoring children with children leaving the foster care system.</p>
                                     </div>
-                                    <a href="#" class="btn btn--white">Check it out</a>
+                                    <a href="https://project-impact.herokuapp.com/" target="_blank" class="btn btn--white">Check it out</a>
                                 </div>
                             </div>
                         </div>
@@ -405,7 +387,7 @@
                     <div class="contact">
                         <div class="contact__form">
                             <div class="u-center-text u-margin-bottom-medium">
-                                <h2 class="heading-secondary"> Contact</h2>  
+                                <h2 class="heading-secondary"> Get in Touch!</h2>  
                             </div>
                             <!-- Learn about forms -->
                             <form class="form" id="contact-form">
