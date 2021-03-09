@@ -4,6 +4,11 @@ const popup = document.getElementById("popup");
 const popupButton = document.getElementById("popup__button");
 const popupContent = document.getElementById("popup__content");
 const popupClose = document.getElementById("popup__close");
+const contactDiv = document.querySelector(".contact");
+const contactForm = document.getElementById('contact-form');
+const message = document.querySelector('.message');
+
+let timer;
 
 //Email JS functionality
 
@@ -19,11 +24,33 @@ window.onload = function() {
       // Send form information to email JS api.
       emailjs.sendForm('service_2zfeihg', 'template_lhf9757', 'contact-form')
           .then(function() {
-              console.log('SUCCESS!');
+            sucessfulMessage();
+            timer = setInterval(restoreForm, 2000);
           }, function(error) {
-              console.log('FAILED...', error);
+            failureMessage();
+            timer = setInterval(restoreForm, 2000);
           });
   });
+}
+
+//Successful Message
+function sucessfulMessage(){
+  contactForm.hidden = true;
+  message.textContent = 'Thank you for your message!';
+}
+
+
+//Failure Message 
+function failureMessage() {
+  contactForm.hidden = true;
+  message.textContent = 'I am sorry. Please try again!'
+}
+
+//Restore form // Set timeout
+
+function restoreForm() {
+  message.textContent = 'Get in touch!'
+  contactForm.hidden = false;
 }
 
 //Navigation

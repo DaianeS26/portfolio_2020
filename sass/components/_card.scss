@@ -73,6 +73,18 @@
       &--3 {
         background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
       }
+
+      &--4 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../img/nat-7.jpg);
+      }
+
+      &--5 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-7.jpg);
+      }
+
+      &--6 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-7.jpg);
+      }
     }
 
     &__heading {
@@ -197,7 +209,7 @@
         }
 
         &__info-value {
-            font-size: 4rem;
+            font-size: 1.6rem;
         }
 
     }
