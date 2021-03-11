@@ -39,11 +39,10 @@ function sucessfulMessage(){
   message.textContent = 'Thank you for your message!';
 }
 
-
 //Failure Message 
 function failureMessage() {
   contactForm.hidden = true;
-  message.textContent = 'I am sorry. Please try again!'
+  message.textContent = "Ooops! Your message wasn't sent. Please try again!"
 }
 
 //Restore form // Set timeout
@@ -51,6 +50,7 @@ function failureMessage() {
 function restoreForm() {
   message.textContent = 'Get in touch!'
   contactForm.hidden = false;
+  document.getElementById('contact-form').reset();
 }
 
 //Navigation
