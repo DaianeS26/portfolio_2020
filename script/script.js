@@ -25,10 +25,8 @@ window.onload = function() {
       emailjs.sendForm('service_2zfeihg', 'template_lhf9757', 'contact-form')
           .then(function() {
             sucessfulMessage();
-            timer = setInterval(restoreForm, 2000);
           }, function(error) {
             failureMessage();
-            timer = setInterval(restoreForm, 2000);
           });
   });
 }
@@ -37,20 +35,28 @@ window.onload = function() {
 function sucessfulMessage(){
   contactForm.hidden = true;
   message.textContent = 'Thank you for your message!';
+  timer = setInterval(restoreFormSuccess, 2000);
 }
 
 //Failure Message 
 function failureMessage() {
   contactForm.hidden = true;
   message.textContent = "Ooops! Your message wasn't sent. Please try again!"
+  timer = setInterval(restoreFormFail, 2000);
 }
 
-//Restore form // Set timeout
-
-function restoreForm() {
+//Restore form Success
+function restoreFormSuccess() {
   message.textContent = 'Get in touch!'
   contactForm.hidden = false;
   document.getElementById('contact-form').reset();
+}
+
+//Restore form Failure
+function restoreFormFail() {
+  message.textContent = 'Get in touch!'
+  contactForm.hidden = false;
+
 }
 
 //Navigation
